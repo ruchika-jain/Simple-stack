@@ -1,7 +1,7 @@
 version: 0.1.0                                            
 
-name: Simple stack          
-description: Test Ruchika      
+name: Simple stack         
+description: Test Simple      
 
 branding:                                              
  icon: 'package'
