@@ -1,6 +1,6 @@
 version: 0.1.0                                            
 
-name: Simple stack         
+name: Stack simple         
 description: Test Simple      
 
 branding:                                              
