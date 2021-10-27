@@ -1,0 +1,43 @@
+version: 0.1.0                                            
+
+name: Test Ruchika          
+description: Test Ruchika      
+
+branding:                                              
+ icon: 'package'
+ color: 'black'
+
+inputs:                                                
+    
+  - name: NODE_VERSION                                 
+    default: v12.22.4                              
+    description: NODE_VERSION for nodejs stack         
+    validvalues:                                       
+    - v12.22.4
+    - v14.17.4
+
+configs:                                               
+  repo-metadata:
+     parameters:
+       description: 'Setup your Nextjs site in Github Pages'
+       topics:                                            
+       - nextjs
+       - github-pages
+
+  branches:                                            
+    - name: main
+      parameters:
+        dismiss-stale-reviews: true                      
+        required-approving-review-count: 1
+        require-code-owner-reviews: true
+
+  environments:                                        
+    - name: development
+      parameters: 
+        protected-branches: false
+        custom-branch-policies:
+          - main
+          - releases/*
+
+init:
+ uses: ".github/workflows/stack-init.yaml"
